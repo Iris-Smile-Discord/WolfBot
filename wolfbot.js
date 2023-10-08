@@ -1,3 +1,15 @@
+const express = require("express");
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+
 const { Client, GatewayIntentBits } = require('discord.js');
     const client = new Client({ intents: [
             GatewayIntentBits.Guilds,
@@ -10,6 +22,7 @@ const { Client, GatewayIntentBits } = require('discord.js');
 //const config = require('./config.json');
 //const prefix = config.prefix;
 require('dotenv').config();
+
 const prefix = process.env.PREFIX; // Access the PREFIX variable from .env
 const discordToken = process.env.DISCORD_TOKEN; // Access the DISCORD_TOKEN variable from .env
 const topggToken = process.env.TOPGG_TOKEN; // Access the TOPGG_TOKEN variable from .env
