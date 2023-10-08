@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
-});
+
 
 const { Client, GatewayIntentBits } = require('discord.js');
     const client = new Client({ intents: [
@@ -282,3 +282,5 @@ client.on('messageCreate', (message) => {
 // Log in to Discord with your bot's token
 //client.login(config.token);
 client.login(process.env.DISCORD_TOKEN);
+
+});
